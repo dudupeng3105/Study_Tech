@@ -54,4 +54,11 @@ console.log(add('2','3')); // unwanted behavior at runtime
   - `number`  / 1, 5.3, -10 / All numbers, no differentiation between integers or floats
   - `string` / 'HI', "HI", \`HI` / All Text Values
   - `boolean` / true, false / Just these two, no "truthy" or "falsy" values
+  - `object` / {age: 30} / Any JS object, more specific types {type of object} are possible
+  - `Array` / [1, 2, 3] / Any Js array, type can be flexible or strict (regading the element types)
+  - `Tuple` / [1, 2] / Added by TypeSciprt: Fixed-length array
+  - `Enum` / enum {NEW, OLD} /  Added by TS: Automatically enumerated 
+    global constant identifiers
 
+  - `Any` / * / Any Kind of value, no specific type assignment
+    -  왠만하면 쓰지마라!
