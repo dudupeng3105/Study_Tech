@@ -1,28 +1,16 @@
-// Union Type
-function combine(
-  input1: number | string,
-  input2: number | string,
-  resultConversion: string
-) {
-  let result;
-  if (typeof input1 === "number" && typeof input2 === "number") {
-    result = input1 + input2;
-  } else {
-    result = input1.toString() + input2.toString();
-  }
-  // if (resultConversion === 'as-number') {
-  //   // return parseFloat(result)
-  //   return +result;
-  // } else {
-  //   return result.toString();
-  // }  
+let userInput: unknown; // 뭘 넣을지 모를 때, 모든 것을 허용하는 것은 아님
+let userName: string;
+
+userInput = 5;
+userInput = 'Max';
+if (typeof userInput === 'string') {
+  userName = userInput;
 }
 
-const combinedAges = combine(30, 26, "as-number");
-console.log(combinedAges);
+function generateError(message: string, code: number): never {
+  throw { message: message, errorCode: code };
+  // while (ture) {}
+}
 
-const combinedStringAges = combine('30', '26', "as-number");
-console.log(combinedStringAges);
-
-const combineNames = combine("Max", "Anna", "as-text");
-console.log(combineNames);
+const result = generateError('An error occurred!', 500);
+console.log(result);
